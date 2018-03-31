@@ -9,12 +9,24 @@ class Navigation extends Component {
             height: 300px;
         `;
 
+        const List = styled.ul`
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        `;
+
         return (
             <Nav>
                 <MediaQuery query={`(min-width: ${this.props.breakpoint || '500px'})`}>
                     // Desktop Menu...
+                    <List>
+                        
+                    </List>
                 </MediaQuery>
-                // Mobile Menu...
+                <MediaQuery query={`(max-width: ${this.props.breakpoint || '500px'})`}>
+                    // Mobile Menu...
+                </MediaQuery>
             </Nav>
         );
     }
